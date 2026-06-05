@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COSTEL & ELY PAINTING AND DECORATING LTD</title>
+  <meta name="description" content="Professional painting and decorating services in Birmingham, UK. Interior, exterior, residential and commercial projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0f172a;
+      --secondary:#1e293b;
+      --accent:#f59e0b;
+      --accent-dark:#d97706;
+      --light:#f8fafc;
+      --text:#334155;
+      --white:#ffffff;
+      --border:#e2e8f0;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --radius:18px;
+      --max-width:1200px;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#fff;
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:min(92%, var(--max-width));
+      margin:auto;
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(226,232,240,.8);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+      gap:20px;
+    }
+
+    .logo{
+      font-size:1.1rem;
+      font-weight:800;
+      color:var(--primary);
+      line-height:1.2;
+    }
+
+    .logo span{
+      display:block;
+      font-size:.78rem;
+      color:var(--accent-dark);
+      font-weight:600;
+      letter-spacing:.6px;
+      text-transform:uppercase;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      font-weight:500;
+      color:var(--secondary);
+      transition:.25s;
+    }
+
+    .nav-links a:hover{
+      color:var(--accent-dark);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:600;
+      transition:.25s;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:#111827;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-primary:hover{
+      background:var(--accent-dark);
+      color:#fff;
+      transform:translateY(-2px);
+    }
+
+    .btn-outline{
+      border:1px solid var(--border);
+      background:#fff;
+      color:var(--primary);
+    }
+
+    .btn-outline:hover{
+      border-color:var(--accent);
+      color:var(--accent-dark);
+      transform:translateY(-2px);
+    }
+
+    /* Hero */
+    .hero{
+      min-height:92vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      background:
+        linear-gradient(90deg, rgba(15,23,42,.88) 0%, rgba(15,23,42,.70) 45%, rgba(15,23,42,.35) 100%),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color:#fff;
+    }
+
+    .hero-content{
+      width:min(100%, 720px);
+      padding:70px 0;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      background:rgba(245,158,11,.15);
+      color:#fbbf24;
+      border:1px solid rgba(251,191,36,.3);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.88rem;
+      font-weight:600;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:clamp(2.2rem, 6vw, 4.4rem);
+      line-height:1.06;
+      margin-bottom:18px;
+      font-weight:800;
+    }
+
+    .hero p{
+      font-size:1.05rem;
+      color:#e2e8f0;
+      margin-bottom:28px;
+      max-width:620px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:32px;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(120px, 1fr));
+      gap:16px;
+      max-width:650px;
+    }
+
+    .stat{
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      padding:18px;
+      border-radius:16px;
+      backdrop-filter:blur(8px);
+    }
+
+    .stat h3{
+      font-size:1.6rem;
+      margin-bottom:6px;
+      color:#fff;
+    }
+
+    .stat p{
+      margin:0;
+      color:#cbd5e1;
+      font-size:.95rem;
+    }
+
+    /* Sections */
+    section{
+      padding:90px 0;
+    }
+
+    .section-header{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-header span{
+      color:var(--accent-dark);
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-size:.85rem;
+    }
+
+    .section-header h2{
+      font-size:clamp(1.8rem, 4vw, 3rem);
+      color:var(--primary);
+      margin:10px 0 14px;
+    }
+
+    .section-header p{
+      max-width:760px;
+      margin:auto;
+      color:#64748b;
+    }
+
+    /* Services */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:24px;
+    }
+
+    .service-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      transition:.25s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-6px);
+      border-color:#fcd34d;
+    }
+
+    .service-icon{
+      width:58px;
+      height:58px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, #f59e0b, #fbbf24);
+      color:#111827;
+      font-size:1.5rem;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .service-card h3{
+      color:var(--primary);
+      margin-bottom:10px;
+      font-size:1.15rem;
+    }
+
+    /* About */
+    .about{
+      background:#f8fafc;
+    }
+
+    .about-wrap{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .about-text{
+      background:#fff;
+      padding:34px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+    }
+
+    .about-text h3{
+      font-size:2rem;
+      color:var(--primary);
+      margin-bottom:14px;
+    }
+
+    .about-text p{
+      margin-bottom:14px;
+      color:#475569;
+    }
+
+    .details-list{
+      display:grid;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .detail-item{
+      background:#f8fafc;
+      border:1px solid var(--border);
+      padding:14px 16px;
+      border-radius:14px;
+    }
+
+    .detail-item strong{
+      color:var(--primary);
+    }
+
+    .about-image{
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      min-height:420px;
+    }
+
+    .about-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* Projects */
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:22px;
+    }
+
+    .project-card{
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#fff;
+      border:1px solid var(--border);
+      transition:.25s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-6px);
+    }
+
+    .project-card img{
+      height:240px;
+      width:100%;
+      object-fit:cover;
+    }
+
+    .project-info{
+      padding:20px;
+    }
+
+    .project-info h3{
+      color:var(--primary);
+      margin-bottom:8px;
+      font-size:1.12rem;
+    }
+
+    .project-info p{
+      color:#64748b;
+      font-size:.96rem;
+    }
+
+    /* CTA */
+    .cta{
+      background:linear-gradient(135deg, var(--primary), var(--secondary));
+      color:#fff;
+      border-radius:28px;
+      padding:48px 30px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .cta h2{
+      font-size:clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom:14px;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:0 auto 24px;
+      color:#dbeafe;
+    }
+
+    .cta .btn-primary{
+      background:#fff;
+      color:var(--primary);
+    }
+
+    .cta .btn-primary:hover{
+      background:#fbbf24;
+      color:#111827;
+    }
+
+    /* Contact */
+    .contact{
+      background:#f8fafc;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .contact-card, .map-card{
+      background:#fff;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .contact-card{
+      padding:32px;
+    }
+
+    .contact-card h3{
+      color:var(--primary);
+      font-size:1.8rem;
+      margin-bottom:16px;
+    }
+
+    .contact-items{
+      display:grid;
+      gap:14px;
+      margin:24px 0;
+    }
+
+    .contact-item{
+      padding:16px;
+      background:#f8fafc;
+      border:1px solid var(--border);
+      border-radius:14px;
+    }
+
+    .contact-item strong{
+      display:block;
+      color:var(--primary);
+      margin-bottom:4px;
+    }
+
+    .map-card iframe{
+      width:100%;
+      height:100%;
+      min-height:450px;
+      border:0;
+    }
+
+    /* Footer */
+    footer{
+      background:#0b1220;
+      color:#cbd5e1;
+      padding:28px 0;
+    }
+
+    .footer-wrap{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    .footer-wrap p{
+      font-size:.95rem;
+    }
+
+    /* WhatsApp Floating */
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      z-index:999;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      box-shadow:0 12px 25px rgba(37,211,102,.35);
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      transition:.25s;
+    }
+
+    .whatsapp-float:hover{
+      transform:translateY(-3px) scale(1.02);
+      box-shadow:0 16px 32px rgba(37,211,102,.45);
+    }
+
+    .whatsapp-float .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#fff;
+    }
+
+    @media (max-width: 980px){
+      .about-wrap,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .about-image{
+        min-height:320px;
+      }
+    }
+
+    @media (max-width: 768px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        width:100%;
+        gap:16px;
+      }
+
+      .hero{
+        min-height:auto;
+        padding:40px 0;
+      }
+
+      .hero-stats{
+        grid-template-columns:1fr;
+      }
+
+      .section-header{
+        margin-bottom:35px;
+      }
+
+      section{
+        padding:70px 0;
+      }
+
+      .whatsapp-float{
+        padding:14px 16px;
+      }
+
+      .whatsapp-float span.label{
+        display:none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        COSTEL & ELY
+        <span>Painting & Decorating</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary" href="https://wa.me/447577366214" target="_blank">
+        Get a Quote
+      </a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Professional Painting & Decorating Services in Birmingham</div>
+        <h1>Transforming Homes & Commercial Spaces with Quality Finishes</h1>
+        <p>
+          We deliver professional interior and exterior painting, decorating, surface preparation,
+          and finishing services with attention to detail, clean workmanship, and reliable customer care.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/447577366214" class="btn btn-primary" target="_blank">WhatsApp Us</a>
+          <a href="#projects" class="btn btn-outline">View Our Work</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>Interior</h3>
+            <p>Modern finishes for homes and flats</p>
+          </div>
+          <div class="stat">
+            <h3>Exterior</h3>
+            <p>Durable and weather-resistant coatings</p>
+          </div>
+          <div class="stat">
+            <h3>Commercial</h3>
+            <p>Professional decorating for business spaces</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span>Our Services</span>
+        <h2>High-Quality Painting & Decorating Solutions</h2>
+        <p>
+          We offer reliable and professional services for residential and commercial clients,
+          with a focus on quality finishes, clean work, and customer satisfaction.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">01</div>
+          <h3>Interior Painting</h3>
+          <p>Walls, ceilings, woodwork, hallways, bedrooms, living rooms, kitchens, and full interior refresh projects.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">02</div>
+          <h3>Exterior Painting</h3>
+          <p>Professional exterior painting for homes and buildings using durable materials designed for long-lasting results.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">03</div>
+          <h3>Decorating & Finishing</h3>
+          <p>Wallpapering, feature walls, decorative finishes, and detail work that adds style and value to any space.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">04</div>
+          <h3>Commercial Projects</h3>
+          <p>Painting and decorating services for offices, shops, and commercial properties with efficient, tidy execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-wrap">
+        <div class="about-text">
+          <span style="color:#d97706;font-weight:700;text-transform:uppercase;letter-spacing:1px;">About Us</span>
+          <h3>Trusted Painting & Decorating in Birmingham</h3>
+          <p>
+            COSTEL & ELY PAINTING AND DECORATING LTD provides professional painting and decorating
+            services for domestic and commercial clients. We focus on clean workmanship, quality materials,
+            and a finished result our customers can be proud of.
+          </p>
+          <p>
+            Whether you need a full property refresh, decorative finishing, or commercial painting,
+            we aim to deliver reliable service and strong attention to detail from start to finish.
+          </p>
+
+          <div class="details-list">
+            <div class="detail-item"><strong>Company:</strong> COSTEL & ELY PAINTING AND DECORATING LTD</div>
+            <div class="detail-item"><strong>Company Type:</strong> Private Company Limited by Shares</div>
+            <div class="detail-item"><strong>Jurisdiction:</strong> England and Wales</div>
+            <div class="detail-item"><strong>Officer:</strong> RODRIGUES DE OLIVEIRA, ANTERO</div>
+            <div class="detail-item"><strong>Phone:</strong> +44 7577 366214</div>
+            <div class="detail-item"><strong>Address:</strong> 107 CLYDESDALE TOWER, BIRMINGHAM, WEST MIDLANDS, B1 1UQ, UNITED KINGDOM</div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Professional decorating work">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span>Recent Projects</span>
+        <h2>Some of Our Featured Work</h2>
+        <p>
+          A selection of painting and decorating styles showcasing clean finishes, quality craftsmanship,
+          and modern presentation.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80" alt="Modern interior painting project">
+          <div class="project-info">
+            <h3>Modern Living Room Finish</h3>
+            <p>Clean wall finishing and modern decorative touch for a bright residential space.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Home decorating project">
+          <div class="project-info">
+            <h3>Elegant Home Decorating</h3>
+            <p>Stylish decorating work with a focus on detail, balance, and refined interior appeal.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80" alt="Bedroom painting project">
+          <div class="project-info">
+            <h3>Bedroom Refresh</h3>
+            <p>Soft tones and smooth finishes creating a calm and inviting environment.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80" alt="Commercial interior painting">
+          <div class="project-info">
+            <h3>Commercial Interior Upgrade</h3>
+            <p>Professional painting solutions for functional spaces with a clean and polished result.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80" alt="Decorating finish">
+          <div class="project-info">
+            <h3>Decorative Finishing Work</h3>
+            <p>Attention to finishing details that enhance style, texture, and visual quality.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" alt="Exterior building project">
+          <div class="project-info">
+            <h3>Exterior Property Work</h3>
+            <p>Exterior painting and restoration designed to improve appearance and durability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Need Professional Painting or Decorating Services?</h2>
+        <p>
+          Contact us today for a free quote and let us help bring your property to life with quality workmanship and reliable service.
+        </p>
+        <a href="https://wa.me/447577366214" target="_blank" class="btn btn-primary">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span>Contact Us</span>
+        <h2>Let’s Talk About Your Project</h2>
+        <p>
+          Reach out by phone or WhatsApp, or visit our registered location in Birmingham.
+        </p>
+      </div>
+
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h3>Contact Information</h3>
+          <p>We are available to discuss residential and commercial painting and decorating projects.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <span>+44 7577 366214</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>WhatsApp</strong>
+              <span><a href="https://wa.me/447577366214" target="_blank">Message us directly</a></span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Address</strong>
+              <span>107 CLYDESDALE TOWER, BIRMINGHAM, WEST MIDLANDS, B1 1UQ, UNITED KINGDOM</span>
+            </div>
+
+            <div class="contact-item">
+              <strong>Registered Office</strong>
+              <span>England and Wales</span>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/447577366214" target="_blank">Get in Touch</a>
+        </div>
+
+        <div class="map-card">
+          <iframe
+            src="https://www.google.com/maps?q=107%20CLYDESDALE%20TOWER%20BIRMINGHAM%20B1%201UQ&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-wrap">
+      <p>© 2026 COSTEL & ELY PAINTING AND DECORATING LTD. All rights reserved.</p>
+      <p>Birmingham, West Midlands, United Kingdom</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/447577366214" target="_blank" aria-label="Chat on WhatsApp">
+    <div class="dot"></div>
+    <span class="label">WhatsApp</span>
+  </a>
+
+</body>
+</html>
